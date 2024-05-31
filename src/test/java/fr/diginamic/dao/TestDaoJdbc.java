@@ -26,7 +26,6 @@ public class TestDaoJdbc {
       }
 
       assertEquals(1, count);
-      db.close();
     } catch (Exception e) {
       System.out.println("An error occurred : " + e.getMessage());
     }
@@ -39,7 +38,6 @@ public class TestDaoJdbc {
 
     try {
       assertEquals(1, dao.extraire().size());
-      db.close();
     } catch (Exception e) {
       System.out.println("An error occurred : " + e.getMessage());
     }
@@ -54,7 +52,6 @@ public class TestDaoJdbc {
     try {
       dao.update(member.getName(), "France matériaux");
       assertEquals("France matériaux", dao.extraire().get(0).getName());
-      db.close();
     } catch (Exception e) {
       System.out.println("An error occurred : " + e.getMessage());
     }
@@ -68,7 +65,6 @@ public class TestDaoJdbc {
 
     try {
       assertEquals(true, dao.delete(member));
-      db.close();
     } catch (Exception e) {
       System.out.println("An error occurred : " + e.getMessage());
     }
@@ -81,7 +77,6 @@ public class TestDaoJdbc {
 
     try {
       assertEquals(0, dao.extraire().size());
-      db.close();
     } catch (Exception e) {
       System.out.println("An error occurred : " + e.getMessage());
     }
@@ -103,7 +98,6 @@ public class TestDaoJdbc {
       }
 
       assertEquals(1, count);
-      db.close();
     } catch (Exception e) {
       System.out.println("An error occurred : " + e.getMessage());
     }
